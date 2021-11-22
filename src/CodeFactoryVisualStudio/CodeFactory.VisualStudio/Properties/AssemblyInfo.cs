@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CodeFactory LLC")]
 [assembly: AssemblyProduct("CodeFactory.VisualStudio")]
-[assembly: AssemblyCopyright("Copyright ©  2020 CodeFactory LLC")]
+[assembly: AssemblyCopyright("Copyright ©  2020 CodeFactory, LLC.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

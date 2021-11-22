@@ -93,19 +93,5 @@
       <LastGenOutput>ConfigurationMessages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CodeFactory.Logging\CodeFactory.Logging.csproj">
-      <Project>{c0cbdd09-b55d-4572-9f4d-d0e6dd8c4a73}</Project>
-      <Name>CodeFactory.Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CodeFactory.VisualStudio\CodeFactory.VisualStudio.csproj">
-      <Project>{b0e14e33-e53e-4f45-81cb-363a92b26b3b}</Project>
-      <Name>CodeFactory.VisualStudio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CodeFactory\CodeFactory.csproj">
-      <Project>{d73c2a8f-64a2-4713-9a23-03c10b888877}</Project>
-      <Name>CodeFactory</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

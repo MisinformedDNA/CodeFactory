@@ -168,15 +168,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeFactory.DotNet\CodeFactory.DotNet.csproj">
-      <Project>{661e6004-c585-45ab-8c40-5a1b826f6490}</Project>
+      <Project>{00abe4bf-8234-4085-b85d-82ed496f660b}</Project>
       <Name>CodeFactory.DotNet</Name>
     </ProjectReference>
     <ProjectReference Include="..\CodeFactory.Logging\CodeFactory.Logging.csproj">
-      <Project>{c0cbdd09-b55d-4572-9f4d-d0e6dd8c4a73}</Project>
+      <Project>{026d5a13-321b-45b8-83b3-828733e2a2a9}</Project>
       <Name>CodeFactory.Logging</Name>
     </ProjectReference>
     <ProjectReference Include="..\CodeFactory\CodeFactory.csproj">
-      <Project>{d73c2a8f-64a2-4713-9a23-03c10b888877}</Project>
+      <Project>{193a8210-1ae6-40c4-8f0d-fa10971dcf70}</Project>
       <Name>CodeFactory</Name>
     </ProjectReference>
   </ItemGroup>

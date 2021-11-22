@@ -1,0 +1,97 @@
+﻿//*****************************************************************************
+//* Code Factory SDK
+//* Copyright (c) 2021 CodeFactory, LLC
+//*****************************************************************************
+using CodeFactory.Document;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace CodeFactory.Language.CSharp{
+    /// <summary>
+    /// Model definition of a method in c#.
+    /// </summary>
+    public interface ICsMethod:ICsMember,ICsGeneric
+    {
+        /// <summary>
+        /// Determines the type of method that was loaded into this model.
+        /// </summary>
+        CsMethodType MethodType { get; }
+
+        /// <summary>
+        ///     The type information about the return type assigned to the method. if flag <see cref="IsVoid"/> is true then the return type will be set to null.
+        /// </summary>
+        ICsType ReturnType { get; }
+
+        /// <summary>
+        ///     Flag that determines if the method has parameters assigned to it.
+        /// </summary>
+        bool HasParameters { get; }
+
+        /// <summary>
+        ///     Enumeration of the parameters that have been assigned to the method. If HasParameters property is set to false this will be null.
+        /// </summary>
+        IReadOnlyList<ICsParameter> Parameters { get; }
+
+        /// <summary>
+        ///     Flag that determines if the method has been implemented as abstract.
+        /// </summary>
+        bool IsAbstract { get; }
+
+        /// <summary>
+        ///     Flag that determines if the method has been implemented as virtual.
+        /// </summary>
+        bool IsVirtual { get; }
+
+        /// <summary>
+        ///     Flag that determines if the method has been sealed.
+        /// </summary>
+        bool IsSealed { get; }
+
+        /// <summary>
+        ///     Flag that determines if the method has been overridden.
+        /// </summary>
+        bool IsOverride { get; }
+
+        /// <summary>
+        ///     Flag that determines if this is a static method.
+        /// </summary>
+        bool IsStatic { get; }
+
+        /// <summary>
+        ///     Flag that determines if the methods return type is void.
+        /// </summary>
+        bool IsVoid { get; }
+
+        /// <summary>
+        ///     Flag that determines if the method implements the Async keyword.
+        /// </summary>
+        bool IsAsync { get; }
+
+        /// <summary>
+        ///     Flag that determines if the method is an extension method.
+        /// </summary>
+        bool IsExtension { get; }
+
+        /// <summary>
+        /// Determines how the internal syntax for the method is stored. 
+        /// </summary>
+        SyntaxType SyntaxContent { get; }
+
+        /// <summary>
+        /// The source code syntax that is stored in the body of the method. This will be null if the method was not loaded from source code or the SyntaxContent is not set to Body.
+        /// </summary>
+        Task<string> GetBodySyntaxAsync();
+
+        /// <summary>
+        /// The source code syntax that is stored in the body of the method. This will be null if the method was not loaded from source code or the SyntaxContent is not set to Body. This will return each line of code that has a line feed or return as a separate string.
+        /// </summary>
+        Task<List<string>> GetBodySyntaxListAsync();
+
+
+        /// <summary>
+        /// Gets the expression that has been assigned to the method. This will be null if the method was not loaded from source code or the SyntaxContent is not set to Expression.
+        /// </summary>
+        /// <returns></returns>
+        Task<string> GetExpressionSyntaxAsync();
+    }
+}

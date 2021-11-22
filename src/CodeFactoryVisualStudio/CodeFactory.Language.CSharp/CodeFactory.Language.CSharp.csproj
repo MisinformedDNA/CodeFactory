@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>CodeFactoryRuntimeSigner.snk</AssemblyOriginatorKeyFile>
+    <Copyright>Copyright ©  2021 CodeFactory, LLC.</Copyright>
+    <Company>CodeFactory, LLC.</Company>
+    <Authors>CodeFactory, LLC.</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFactory\CodeFactory.csproj" />
+  </ItemGroup>
+
+</Project>
