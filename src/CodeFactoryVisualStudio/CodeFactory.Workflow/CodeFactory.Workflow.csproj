@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C2EC835-5614-4D5C-9EDC-1D893D6D153B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeFactory.Workflow</RootNamespace>
+    <AssemblyName>CodeFactory.Workflow</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CodeFactoryRuntimeSigner.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\CSharpSourceWorkflowCommandModel.cs" />
+    <Compile Include="Command\CSharpSourceWorkflowCommandEnableRuleBase.cs" />
+    <Compile Include="Command\CSharpSourceWorkflowCommandBase.cs" />
+    <Compile Include="Command\DocumentWorkflowCommandModel.cs" />
+    <Compile Include="Command\IWorkflowCommand.cs" />
+    <Compile Include="Command\IWorkflowCommandEnableRule.cs" />
+    <Compile Include="Command\IWorkFlowCommandModel.cs" />
+    <Compile Include="Command\DocumentWorkflowCommandBase.cs" />
+    <Compile Include="Command\ProjectWorkflowCommandBase.cs" />
+    <Compile Include="Command\ProjectWorkflowCommandEnableRuleBase.cs" />
+    <Compile Include="Command\ProjectFolderWorkflowCommandModel.cs" />
+    <Compile Include="Command\ProjectWorkflowCommandModel.cs" />
+    <Compile Include="Command\ProjectFolderWorkflowCommandEnableRuleBase.cs" />
+    <Compile Include="Command\ProjectFolderWorkflowCommandBase.cs" />
+    <Compile Include="Command\SolutionFolderWorkflowCommandBase.cs" />
+    <Compile Include="Command\SolutionFolderWorkflowCommandModel.cs" />
+    <Compile Include="Command\SolutionFolderWorkflowCommandEnableRuleBase.cs" />
+    <Compile Include="Command\DocumentWorkflowCommandEnableRuleBase.cs" />
+    <Compile Include="Command\SolutionWorkflowCommandBase.cs" />
+    <Compile Include="Command\SolutionWorkflowCommandEnableRuleBase.cs" />
+    <Compile Include="Command\SolutionWorkflowCommandModel.cs" />
+    <Compile Include="Command\WorkFlowCommandBase.cs" />
+    <Compile Include="Command\WorkflowCommandEnableRuleBase.cs" />
+    <Compile Include="Command\WorkFlowCommandModel.cs" />
+    <Compile Include="Config\IModelLocation.cs" />
+    <Compile Include="Config\ModelLocation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFactory.DotNet\CodeFactory.DotNet.csproj">
+      <Project>{661e6004-c585-45ab-8c40-5a1b826f6490}</Project>
+      <Name>CodeFactory.DotNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeFactory.Logging\CodeFactory.Logging.csproj">
+      <Project>{c0cbdd09-b55d-4572-9f4d-d0e6dd8c4a73}</Project>
+      <Name>CodeFactory.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeFactory.VisualStudio\CodeFactory.VisualStudio.csproj">
+      <Project>{b0e14e33-e53e-4f45-81cb-363a92b26b3b}</Project>
+      <Name>CodeFactory.VisualStudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeFactory\CodeFactory.csproj">
+      <Project>{d73c2a8f-64a2-4713-9a23-03c10b888877}</Project>
+      <Name>CodeFactory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeFactoryRuntimeSigner.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
