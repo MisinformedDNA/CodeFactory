@@ -4,13 +4,13 @@
 //*****************************************************************************
 using CodeFactory.VisualStudio;
 
-namespace CodeFactory.Workflow.Command
+namespace CodeFactory.Workflow
 {
     /// <summary>
-    /// Model that is provided as part of a Workflow command.
+    /// CodeFactory model and the action framework that handles CodeFactory automation for Visual Studio.
     /// </summary>
     /// <typeparam name="TModel">The type of CodeFactory model being provided.</typeparam>
-    public class WorkflowCommandModel<TModel>:IWorkflowCommandModel<TModel> where TModel : class
+    public class WorkflowModel<TModel>:IWorkflowModel<TModel> where TModel : class
     {
         private readonly IVsActions _visualStudioActions;
         private readonly TModel _model;
@@ -20,7 +20,7 @@ namespace CodeFactory.Workflow.Command
         /// </summary>
         /// <param name="visualStudioActions">Automation commands  from CodeFactory. </param>
         /// <param name="model">Generated model to be provided to the command.</param>
-        public WorkflowCommandModel(IVsActions visualStudioActions, TModel model)
+        public WorkflowModel(IVsActions visualStudioActions, TModel model)
         {
             _visualStudioActions = visualStudioActions;
             _model = model;

@@ -9,7 +9,7 @@ namespace CodeFactory.Workflow.Command
     /// <summary>
     /// Workflow command model that supports <see cref="VsSolutionFolder"/> model.
     /// </summary>
-    public class SolutionFolderWorkflowCommandModel:WorkflowCommandModel<VsSolutionFolder>
+    public class SolutionFolderWorkflowCommandModel:WorkflowModel<VsSolutionFolder>
     {
         /// <summary>
         /// Creates an instance of the Workflow command model.

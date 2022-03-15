@@ -4,10 +4,10 @@
 //*****************************************************************************
 using CodeFactory.VisualStudio;
 
-namespace CodeFactory.Workflow.Command
+namespace CodeFactory.Workflow
 {
     /// <summary>
-    /// Command model that provides access to CodeFactory model data and the automation API from CodeFactory.
+    /// CodeFactory model that provides access to CodeFactory model data and the automation API from CodeFactory.
     /// </summary>
     /// <typeparam name="TModel">CodeFactory model that represents a CodeFactory Command.</typeparam>
     public interface IWorkflowModel<TModel> where TModel : class

@@ -9,7 +9,7 @@ namespace CodeFactory.Workflow.Command
     /// <summary>
     /// Workflow command model that supports <see cref="VsDocument"/> model.
     /// </summary>
-    public class DocumentWorkflowCommandModel:WorkflowCommandModel<VsDocument>
+    public class DocumentWorkflowCommandModel:WorkflowModel<VsDocument>
     {
         /// <summary>
         /// Creates an instance of the Workflow command model.

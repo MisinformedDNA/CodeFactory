@@ -35,26 +35,23 @@ namespace CodeFactory.Workflow.Command
         string Category { get;}
 
         /// <summary>
-        /// Enable rules to be processed when the Workflow command executes. 
-        /// </summary>
-        IReadOnlyList<IWorkflowCommandEnableRule<TModel>> EnableRules { get; }
-
-        /// <summary>
         /// Validation logic that will determine if this command should be enabled for execution.
         /// </summary>
         /// <param name="result">The target model data that will be used to determine if this command should be enabled.</param>
         /// <param name="locations">Model location data to be used by the command.This is optional and is null if not provided. </param>
         /// <param name="enableRules">Rules that provided to determine if the command should be enabled for usage by developers.This is optional and is null if not provided.</param>
+        /// <param name="data">Optional workflow data to be used in validation of the command to be enabled.</param>
         /// <returns>Boolean flag that will tell code factory to enable this command or disable it.</returns>
-        Task<bool> EnableWorkflowCommandAsync(IWorkflowCommandModel<TModel> result, IReadOnlyList<IModelLocation> locations = null,
-            IReadOnlyList<IWorkflowCommandEnableRule<TModel>> enableRules = null);
+        Task<bool> EnableWorkflowCommandAsync(IWorkflowModel<TModel> result, IReadOnlyList<IModelLocation> locations = null,
+            IReadOnlyList<IWorkflowCommandEnableRule<TModel>> enableRules = null, WorkflowData data = null);
 
         /// <summary>
         /// Executes the Software Factory automation hosted in this command.
         /// </summary>
         /// <param name="result">The target CodeFactory model the represents functionality project system or content functionality.</param>
         /// <param name="locations">Model location data to be used by the command.This is optional and is null if not provided. </param>
-        Task ExecuteWorkflowCommandAsync(IWorkflowCommandModel<TModel> result, IReadOnlyList<IModelLocation> locations = null);
+        /// <param name="data">Optional workflow data to be used in execution of the command.</param>
+        Task ExecuteWorkflowCommandAsync(IWorkflowModel<TModel> result, IReadOnlyList<IModelLocation> locations = null,WorkflowData data = null);
 
     }
 }

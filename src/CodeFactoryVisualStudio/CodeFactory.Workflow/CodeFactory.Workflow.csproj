@@ -69,6 +69,7 @@
     <Compile Include="Command\DocumentWorkflowCommandModel.cs" />
     <Compile Include="Command\IWorkflowCommand.cs" />
     <Compile Include="Command\IWorkflowCommandEnableRule.cs" />
+    <Compile Include="IWorkFlowModel.cs" />
     <Compile Include="Command\IWorkFlowCommandModel.cs" />
     <Compile Include="Command\DocumentWorkflowCommandBase.cs" />
     <Compile Include="Command\ProjectWorkflowCommandBase.cs" />
@@ -86,14 +87,14 @@
     <Compile Include="Command\SolutionWorkflowCommandModel.cs" />
     <Compile Include="Command\WorkFlowCommandBase.cs" />
     <Compile Include="Command\WorkflowCommandEnableRuleBase.cs" />
-    <Compile Include="Command\WorkFlowCommandModel.cs" />
+    <Compile Include="WorkFlowModel.cs" />
     <Compile Include="Config\IModelLocation.cs" />
     <Compile Include="Config\ModelLocation.cs" />
+    <Compile Include="WorkflowData.cs" />
+    <Compile Include="Content\IContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\CodeFactory.DotNet\CodeFactory.DotNet.csproj">
       <Project>{661e6004-c585-45ab-8c40-5a1b826f6490}</Project>
